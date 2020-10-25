@@ -1,11 +1,271 @@
 body {
   margin: 0;
-  padding: 30px;
+  padding: 2em;
   font-family: $font-family-sans-serif;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  background-color: $baby-powder;
+  color: $oxford-blue;
+  min-height: 100vh;
+  line-height: 1.5;
+  display: flex column;
 }
 
+a { color: inherit; } 
+
+.section{
+  display: flex column;
+  padding: 5% 0 0 0;
+
+  &__title{
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 15%;
+
+    &--highlighted{
+      //text-decoration: underline;
+      border-bottom: 5px solid $amber;
+      //text-decoration-color: $amber;
+    }
+
+
+  }
+
+
+  &__content{
+    font-size: 1.5em;
+  }
+
+}
+
+.timeline {
+  
+  &__element {
+  
+    border-top: 4px dashed;
+    border-color: $oxford-blue !important;
+    margin:0; 
+    padding: 30px;
+  }
+
+  &__title{
+    font-size: 2em;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  &__subtitle{
+    font-size: 1.5em;
+    margin:0;
+    font-weight: 500;
+  }
+
+  &__content{
+    background-color: lightblue;
+    border: none !important;
+    border-radius: 5% !important;
+  }
+  
+  
+  
+  div:nth-child(even) {
+    border-left: 4px dashed;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-right: 30px; 
+    padding-right: 0;
+  }
+  
+  div:nth-child(odd) {
+    border-right: 4px dashed;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-left: 30px; 
+    padding-left: 0;
+  }
+  
+  div:first-child {
+    border-top: 0;
+    border-top-right-radius:0;
+    border-top-left-radius:0;
+  }
+  
+  div:last-child {
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+  }
+
+}
+
+
+
+.header{
+  display: flex column;
+
+  .wave {
+    animation-name: wave-animation;  
+    animation-duration: 2.5s;       
+    animation-iteration-count: infinite; 
+    transform-origin: 70% 70%;       
+    display: inline-block;
+  }
+
+  &__title{
+    font-size: 2.5em;
+    font-weight: 900;
+    margin: 0;
+
+    &--highlighted{
+      color: $amber;
+    }
+  }
+
+  &__social{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding: 10% 0;
+  }
+
+  &__img {
+    flex: 1;
+    max-width: 100%;
+    padding: 5% 0;
+    animation: animate 10s linear infinite;
+  }
+}
+
+.card{
+  width: 100%;
+  max-width: 300px;
+  min-width: 200px;
+  height: 250px;
+  background-color: $baby-powder;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(52, 138, 167, 0.2);
+  //border: 2px solid rgba(52, 138, 167, 0.2);
+  font-size: 16px;   
+ // transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease;
+
+  &:hover {
+    height: 270px;
+    box-shadow: 0px 5px 20px rgba(255, 127, 17, 0.4);
+    border: none;
+
+    .card__icon
+      {
+        background-position: -120px;
+        transition: all 0.3s ease;
+
+        i {
+          background: $baby-powder;
+          -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+          opacity: 1;
+          transition: all 0.3s ease;
+       }
+    }
+
+    .card__text{
+      transition: all 0.3s ease;
+      opacity: 1;
+      max-height:200px;
+
+  }
+    
+  
+
+  }
+
+  &__icon {
+    margin: 2% auto;
+    width: 100%;
+    height: 80px;
+    max-width:80px;
+    background: linear-gradient(90deg, $oxford-blue 0%, $oxford-blue 40%, $blue-munsell 60%);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.8s ease;
+    background-position: 0px;
+    background-size: 200px;
+    
+ }
+
+ &__title{
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  margin-top: 30px;
+  color: $oxford-blue;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+&__text {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 20px;
+  color: $oxford-blue;
+  font-weight: 200;
+  letter-spacing: 2px;
+  opacity: 0;
+  max-height:0;
+  transition: all 0.3s ease;
+
+}
+
+ 
+
+}
+
+@keyframes animate {
+
+  0%, 100%{
+    border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+  }
+
+  25% {
+    border-radius: 73% 27% 26% 38% / 73% 36% 64% 27%;
+  }
+
+  50% {
+    border-radius: 28% 72% 44% 56% / 49% 40% 60% 51%;
+  }
+
+  75% {
+    border-radius: 40% 60% 70% 30% / 47% 62% 38% 53%;
+  }
+
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) }
+ 10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+ 20% { transform: rotate(-8.0deg) }
+ 30% { transform: rotate(14.0deg) }
+ 40% { transform: rotate(-4.0deg) }
+ 50% { transform: rotate(10.0deg) }
+ 60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+100% { transform: rotate( 0.0deg) }
+}
+
+
+
+
+
+
+/*
 .uoc-logo {
   display: block;
   margin-bottom: 20px;
@@ -13,9 +273,12 @@ body {
   height: auto;
 }
 
+
 .uoc-title {
-  font-family: $font-family-serif;
   font-size: 36px;
   font-weight: 700;
-  color: $uoc-corporate;
 }
+
+*/
+
+

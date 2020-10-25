@@ -10,6 +10,6 @@
  * Write any other JavaScript below
  */
 
-+( function() {
+/*( function() {
   console.log('Hello, UOC!');
-} )();
+} )();*/
