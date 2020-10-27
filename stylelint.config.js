@@ -18,6 +18,7 @@ module.exports = {
           "variants",
           "screen",
           "use",
+          "extend"
         ],
       },
     ],

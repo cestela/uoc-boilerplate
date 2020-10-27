@@ -24,7 +24,9 @@ a {
     margin-bottom: 15%;
 
     &--highlighted {
-      border-bottom: 5px solid $amber;
+      & span {
+        border-bottom: 5px solid $amber;
+      }
     }
   }
 
@@ -43,7 +45,7 @@ a {
 .timeline {
   display: flex;
   flex-flow: column;
-  
+
   &__element {
     border-top: 4px dashed;
     border-color: $amber !important;
@@ -110,16 +112,18 @@ a {
   }
 }
 
-.header {
-  display: flex column;
-
-  & .wave {
+.icon {
+  &--animated {
     animation-name: wave-animation;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
     display: inline-block;
   }
+}
+
+.header {
+  display: flex column;
 
   &__title {
     font-size: 2.5em;
@@ -130,7 +134,9 @@ a {
     }
 
     &--highlighted {
-      color: $amber;
+      & span {
+        color: $amber;
+      }
     }
   }
 
@@ -228,6 +234,62 @@ a {
     opacity: 0;
     max-height: 0;
     transition: all 0.3s ease;
+
+    &--flip {
+      color: $baby-powder;
+      max-height: none;
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+}
+
+.flip-card {
+  width: 100%;
+  min-width: 200px;
+  height: 250px;
+  margin: 30px 0;
+  font-size: 16px;
+  perspective: 1000px;
+
+  &:hover {
+    & .flip-card__container {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  &__front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    background-color: $baby-powder;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(52, 138, 167, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__back {
+    @extend .flip-card__front;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $baby-powder;
+    opacity: 1;
+    transform: rotateY(180deg);
+    background: $blue-munsell;
   }
 }
 
