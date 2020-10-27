@@ -41,12 +41,14 @@ a {
 }
 
 .timeline {
+  display: flex;
+  flex-flow: column;
+  
   &__element {
     border-top: 4px dashed;
     border-color: $amber !important;
     margin: 0;
     padding: 30px;
-    display: flex column;
     justify-content: center;
     align-items: center;
 
@@ -86,7 +88,7 @@ a {
     font-weight: 700;
 
     &--important {
-      font-size: 1.5em;
+      font-size: 1.8em;
     }
 
     &--highlighted {
@@ -122,7 +124,10 @@ a {
   &__title {
     font-size: 2.5em;
     font-weight: 900;
-    margin: 0;
+    
+    & p {
+      margin: 0;
+    }
 
     &--highlighted {
       color: $amber;
