@@ -178,12 +178,13 @@ a {
   transition: all 0.3s ease;
 
   &--small {
-    min-width: 50px;
-    height: 50px;
-    width: 50px;
+    min-width: 80px;
+    height: 80px;
+    width: 80px;
+    font-size: 1.5em;
 
     &:hover {
-      height: 50px !important;
+      height: 80px !important;
     }
 
     & .card__title {
