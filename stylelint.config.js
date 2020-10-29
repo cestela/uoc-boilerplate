@@ -21,7 +21,9 @@ module.exports = {
           "extend",
           "for",
           "return",
-          "function"
+          "function",
+          "mixin",
+          "include"
         ],
       },
     ],
