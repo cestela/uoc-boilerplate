@@ -39,7 +39,8 @@ a {
 
     &--row {
       flex-flow: row;
-      justify-content: space-around;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     & > * {
@@ -191,6 +192,18 @@ a {
       margin: 0;
     }
   }
+
+  &--rounded {
+    border-radius: 90px;
+    flex: 1 0 33%;
+    border: none;
+    box-shadow: none;
+    min-height: 80px;
+
+    &:hover {
+      box-shadow: none !important;
+    }
+  }
   
   &:hover {
     height: 300px;
@@ -234,6 +247,10 @@ a {
     transition: all 0.8s ease;
     background-position: 0;
     background-size: 200px;
+
+    &--no-margin {
+      margin: 0;
+    }
   }
  
   &__title {
