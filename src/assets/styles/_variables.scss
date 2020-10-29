@@ -1,7 +1,12 @@
-@use "sass:color";
-
 $font-family-sans-serif: helvetica;
-$baby-powder: #fdfff7;
-$amber: #ff7f11;
-$blue-munsell: #348aa7;
-$oxford-blue: #001d4a;
+
+$colors: (
+  baby-powder: #fdfff7,
+  amber: #ff7f11,
+  blue-munsell: #348aa7,
+  oxford-blue: #001d4a
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}

@@ -1,9 +1,11 @@
+@use "sass:color";
+
 body {
   margin: 0;
   padding: 2em;
   font-family: $font-family-sans-serif;
-  background-color: $baby-powder;
-  color: $oxford-blue;
+  background-color: color(baby-powder);
+  color: color(oxford-blue);
   min-height: 100vh;
   line-height: 1.5;
   display: flex column;
@@ -25,7 +27,7 @@ a {
 
     &--highlighted {
       & span {
-        border-bottom: 5px solid $amber;
+        border-bottom: 5px solid color(amber);
       }
     }
   }
@@ -55,7 +57,7 @@ a {
 
   &__element {
     border-top: 4px dashed;
-    border-color: $amber !important;
+    border-color: color(amber) !important;
     margin: 0;
     padding: 30px;
     justify-content: center;
@@ -101,7 +103,7 @@ a {
     }
 
     &--highlighted {
-      color: $amber;
+      color: color(amber);
     }
   }
 
@@ -142,7 +144,7 @@ a {
 
     &--highlighted {
       & span {
-        color: $amber;
+        color: color(amber);
       }
     }
   }
@@ -166,10 +168,10 @@ a {
   width: 100%;
   min-width: 200px;
   height: 250px;
-  background-color: $baby-powder;
+  background-color: color(baby-powder);
   margin: 30px 0;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(52, 138, 167, 0.2);
+  box-shadow: 0 2px 10px transparentize(color(oxford-blue), 0.7);
   font-size: 16px;
   position: relative;
   display: flex;
@@ -207,14 +209,14 @@ a {
   
   &:hover {
     height: 300px;
-    box-shadow: 0 5px 20px rgba(255, 127, 17, 0.4);
+    box-shadow: 0 5px 20px transparentize(color(amber), 0.7);
 
     & .card__icon {
       background-position: -120px;
       transition: all 0.3s ease;
 
       & i {
-        background: $baby-powder;
+        background: color(baby-powder);
         background-clip: text;
         opacity: 1;
         transition: all 0.3s ease;
@@ -238,12 +240,12 @@ a {
     width: 100%;
     height: 80px;
     max-width: 80px;
-    background: linear-gradient(90deg, $oxford-blue 0%, $oxford-blue 40%, $blue-munsell 60%);
+    background: linear-gradient(90deg, color(oxford-blue) 0%, color(oxford-blue) 40%, color(blue-munsell) 60%);
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: color(baby-powder);
     transition: all 0.8s ease;
     background-position: 0;
     background-size: 200px;
@@ -258,7 +260,7 @@ a {
     margin: 0;
     text-align: center;
     margin-top: 30px;
-    color: $oxford-blue;
+    color: color(oxford-blue);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -269,14 +271,14 @@ a {
     margin: 0 auto;
     text-align: center;
     margin-top: 20px;
-    color: $oxford-blue;
+    color: color(oxford-blue);
     letter-spacing: 2px;
     opacity: 0;
     max-height: 0;
     transition: all 0.3s ease;
 
     &--flip {
-      color: $baby-powder;
+      color: color(baby-powder);
       max-height: none;
       opacity: 1;
       margin-top: 0;
@@ -312,9 +314,9 @@ a {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background-color: $baby-powder;
+    background-color: color(baby-powder);
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(52, 138, 167, 0.2);
+    box-shadow: 0 2px 10px transparentize(color(oxford-blue), 0.7);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -325,10 +327,10 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: $baby-powder;
+    color: color(baby-powder);
     opacity: 1;
     transform: rotateY(180deg);
-    background: $blue-munsell;
+    background: color(blue-munsell);
   }
 }
 

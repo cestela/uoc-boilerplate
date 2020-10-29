@@ -20,6 +20,8 @@ module.exports = {
           "use",
           "extend",
           "for",
+          "return",
+          "function"
         ],
       },
     ],
