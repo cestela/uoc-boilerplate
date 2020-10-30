@@ -18,12 +18,11 @@ module.exports = {
           "variants",
           "screen",
           "use",
-          "extend",
-          "for",
           "return",
           "function",
           "mixin",
-          "include"
+          "include",
+          "extend"
         ],
       },
     ],
