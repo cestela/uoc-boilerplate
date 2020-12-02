@@ -2,10 +2,10 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
 }
-
 
 body {
   margin: 0;
@@ -18,7 +18,12 @@ body {
   background-repeat: no-repeat;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $headers;
   text-transform: uppercase;
 }
@@ -28,7 +33,6 @@ h1 {
   font-weight: 900;
 }
 
-
 .logo {
   max-width: 100px;
   height: auto;
@@ -37,7 +41,6 @@ h1 {
 li {
   list-style-type: none;
 }
-
 
 section li {
   width: 200px;
@@ -52,7 +55,6 @@ section li {
   background-color: transparent;
 }
 
-
 nav {
   text-transform: uppercase;
   font-weight: 900;
@@ -60,8 +62,8 @@ nav {
 
 a {
   text-decoration: none;
-   color: inherit;
-  }
+  color: inherit;
+}
 
 a:hover {
   text-decoration: underline $red 4px;
@@ -70,7 +72,6 @@ a:hover {
 header h3 span {
   background-color: $red;
 }
-
 
 li img {
   max-width: 100%;
@@ -92,94 +93,102 @@ footer {
   margin: auto 0;
   min-height: 100%;
   width: 50%;
-  i {
+
+  & i {
     float: right;
     margin: 5%;
   }
 }
 
+@supports (display: grid) {
+  li {
+    width: auto;
+    margin: 0;
+  }
 
-@supports(display: grid) {
-    li {
-      width: auto;
-      margin: 0;
+  @media (min-width: 680px) {
+    main {
+      display: grid;
+      grid-template-columns: 100px repeat(4, 1fr);
+      grid-template-rows: 100px repeat(2, 1fr);
+      grid-gap: 2vw;
     }
 
-    @media (min-width: 680px){
-      main {
+    nav {
+      display: grid;
+      grid-column: 2 / 6;
+      grid-row: 1 / 1;
+
+      & ul {
+        justify-self: end;
+        align-self: center;
+
+        & li {
+          display: inline-block;
+          margin: 0 15px;
+        }
+      }
+    }
+
+    header {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+
+    section {
+      grid-column: 3 / -1;
+      grid-row: 2 / 4;
+      display: grid;
+
+      & ul {
         display: grid;
-        grid-template-columns: 100px repeat(4, 1fr);
-        grid-template-rows: 100px repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-gap: 2vw;
-      }
+        padding: 0;
+        padding-inline-start: 0;
 
-      nav {
-        display: grid;
-        grid-column: 2 / 6;
-        grid-row: 1 / 1;
-        ul {
-          justify-self: end;
+        & li {
           align-self: center;
-
-          li {
-            display: inline-block;
-            margin: 0 15px;
-          }
+          justify-self: center;
         }
       }
+    }
+  }
 
-      header {
-        grid-column: 2/3;
-        grid-row: 2/3;
-      }
+  @media (max-width: 1145px) {
+    section {
+      grid-column: 3 / -1;
+      grid-row: 2 / 4;
+      display: grid;
 
-      section{
-        grid-column: 3 / -1;
-        grid-row: 2 / 4;
+      & ul {
         display: grid;
-        ul {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(3, 1fr);
-          grid-gap: 2vw;
-          li {
-            align-self: center;
-            justify-self: center;
-          }
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 2vw;
+        padding-inline-start: 0;
+
+        & li {
+          align-self: center;
+          justify-self: center;
         }
-      } 
+      }
     }
 
-    @media (max-width: 1145px){
-      section{
-        grid-column: 3 / -1;
-        grid-row: 2 / 4;
-        display: grid;
-        ul {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(3, 1fr);
-          grid-gap: 2vw;
-          li {
-            align-self: center;
-            justify-self: center;
-          }
-        }
-      } 
-
-      section li {
-        width: 170px;
-        height: 170px;
-      }
-
-      nav{
-        margin: 0;
-        ul {
-          li {
-            margin: 0 5px;
-          }
-        }
-      }
-      
+    section li {
+      width: 170px;
+      height: 170px;
     }
+
+    nav {
+      margin: 0;
+
+      & ul {
+        & li {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
 }
