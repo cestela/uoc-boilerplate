@@ -115,6 +115,12 @@ body {
   }
 }
 
+@media (max-width: 800px) {
+  .card {
+    width: 100%;
+  }
+}
+
 @media (max-width: 650px) {
   header {
     display: flex;
@@ -127,11 +133,13 @@ body {
   .gallery,
   header {
     flex-direction: column;
+    width: 100%;
   }
 
   .gallery {
     width: 300px;
-    width: 100%;
+    width: 100% !important;
+    margin-left: 15%;
   }
 
   .img {
@@ -142,5 +150,9 @@ body {
     margin-left: 0;
     width: 100%;
     font-size: 3.5rem;
+  }
+
+  .card {
+    width: 100%;
   }
 }
