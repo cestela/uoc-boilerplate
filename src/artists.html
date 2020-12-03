@@ -7,63 +7,66 @@
         <link
             rel="stylesheet"
             type="text/css"
-            href="./assets/styles/main.scss"
+            href="./assets/styles/artists.scss"
         />
         <!-- do not remove this line! -->
         <title>Music Lab Fest</title>
     </head>
     <body>
         <main>
-        <img
+        <nav>
+            <a href="index.html"><img
             src="assets/images/logo.png"
             alt="Music Lab Fest"
             class="logo"
-        />
-        <nav>
+        /></a>
             <ul>
-                <li><a href="http://">Artistas invitados</a></li>
+                <li><a href="artists.html">Artistas invitados</a></li>
                 <li><a href="http://">Sobre nosotros</a></li>
                 <li><a href="http://">Consigue tus entradas</a></li>
             </ul>
         </nav>
         <header>
-            <h1>Music Lab Fest</h1>
-            <h2>Junio 2021</h2>
-            <h3>Consigue tus entradas <a href="http://">aquí</a></h3>
+            <h1>Artistas invitados</h1>
         </header>
         <section>
-            <ul>
-                <li>
-                    <h3>The Thunderides</h3>
-                </li>
-                <li>
-                    <h3>Sor Beatriz</h3>
-                </li>
-                <li>
-                    <h3>Los Chupacabras</h3>
-                </li>
-                <li>
-                    <h3>Sammy Smithor</h3>
-                </li>
-                <li class="deactivated">
-                    <img
-                    src="assets/images/logo.png"
-                    alt="Music Lab Fest"
-                />
-                </li>
-                <li>
-                    <h3>Hakkuna Matata</h3>
-                </li>
-                <li>
-                    <h3>James Bello</h3>
-                </li>
-                <li>
-                    <h3>Callum Warlow</h3>
-                </li>
-                <li>
-                    <h3>Intense Repertoire</h3>
-                </li>
-            </ul>
+            <div class="gallery">
+                <div class="card card--jamesbello">
+                    <h3 class="card__title">James Bello</h3>
+                    <p class="card__body">Rock</p>
+                </div>
+                <div class="card card--thethunderides">
+                    <h3 class="card__title">The Thunderides</h3>
+                    <p class="card__body">Country Rock</p>
+                </div>
+                <div class="card card--sorbeatriz">
+                    <h3 class="card__title">Sor Beatriz</h3>
+                    <p class="card__body">Indie Pop</p>
+                </div>
+                <div class="card card--loschupacabras">
+                    <h3 class="card__title">Los Chupacabras</h3>
+                    <p class="card__body">Heavy Metal</p>
+                </div>
+                <div class="card card--sammysmithor">
+                    <h3 class="card__title">Sammy Smithor</h3>
+                    <p class="card__body">Techno</p>
+                </div>
+                <div class="card card--hakkunamatata">
+                    <h3 class="card__title">Hakkuna Matata</h3>
+                    <p class="card__body">Indie Rock</p>
+                </div>
+                <div class="card card--intenserepertoire">
+                    <h3 class="card__title">Intense Repertoire</h3>
+                    <p class="card__body">Rock Pop</p>
+                </div>
+                <div class="card card--callumwarlow">
+                    <h3 class="card__title">Callum Warlow</h3>
+                    <p class="card__body">Country Pop</p>
+                </div>
+            </div>
+            <div class="img">
+                <img src="./assets/images/solo.jpg" alt="Sammy Smithor">
+                </div>
         </section>
         </main>
         <footer>

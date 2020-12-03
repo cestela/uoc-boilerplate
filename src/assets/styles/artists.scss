@@ -1,0 +1,162 @@
+
+ @import "variables";
+ @import "@fortawesome/fontawesome-free/css/all.css";
+ @import "layouts/home";
+ 
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width:100%;
+    justify-content: space-around;
+}
+
+.card {
+        
+    height: 300px;
+    width: 300px;
+    margin: 2%;
+    border-radius: 7px;
+    padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $red;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &__title {
+        background-color: $red;
+        color: white;
+        padding: 5px;
+    }
+
+    &__body {
+        margin: 0;
+    }
+
+    &:hover {
+       border: 1px $red solid; 
+       box-shadow: 0px 0px 25px 0px $red;
+
+    }
+
+    &--jamesbello {
+        background-image: url("/assets/images/jamesbello.jpg");
+        
+    }
+
+    &--thethunderides {
+        background-image: url("/assets/images/thethunderides.jpg");
+    }
+
+    &--sorbeatriz {
+        background-image: url("/assets/images/sorbeatriz.jpg");
+        background-position: center;
+
+    }
+
+    &--loschupacabras {
+        background-image: url("/assets/images/loschupacabras.jpg");
+    }
+
+    &--sammysmithor {
+        background-image: url("/assets/images/sammysmithor.jpg");
+        background-position: center;
+    }
+
+    &--hakkunamatata {
+        background-image: url("/assets/images/hakkunamatata.jpg");
+        background-position: center;
+    }
+
+    &--intenserepertoire {
+        background-image: url("/assets/images/intenserepertoire.jpg");
+        background-position: center;
+    }  
+
+    &--callumwarlow {
+        background-image: url("/assets/images/callumwarlow.jpg");
+        background-position: center;
+    }  
+} 
+
+h1 {
+ margin-left: 10%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+body {
+    background-image: none;
+}
+
+.img {
+    position: absolute;
+    left: 900px;
+    top: 100px;
+    z-index: -1;
+    height: 100%;
+    & img {
+        width: 900px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .gallery {
+        max-width:100%;
+    }
+
+    header {
+        display: flex;
+        width: 100%;
+    }
+
+    main, 
+    nav,
+    section,
+    .gallery,
+    header {
+        flex-direction: column;
+    }
+
+    section,
+    .gallery {
+        max-width: 100%;
+    }
+
+    .img {
+        display: none;
+    }
+
+    h1 {
+        margin-left: 0;
+        width: 100%;
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 7430px) {
+    .gallery {
+        max-width: 100% !important;
+    }
+}
