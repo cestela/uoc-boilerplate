@@ -1,5 +1,8 @@
 module.exports = {
   extends: "stylelint-config-standard",
+  ignoreFiles: [
+    "./src/assets/styles/_variables.scss"
+  ],
   plugins: ["stylelint-scss"],
   rules: {
     "selector-nested-pattern": "^&",

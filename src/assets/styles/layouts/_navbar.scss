@@ -1,0 +1,32 @@
+.navbar {
+  background-color: transparent !important;
+
+  &-nav {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white !important;
+    flex-direction: row !important;
+    justify-content: end;
+  }
+
+  &-brand:hover {
+    border-bottom: none;
+  }
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid $red;
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    &-nav {
+      flex-direction: column !important;
+      align-self: flex-start;
+    }
+
+    &-brand {
+      align-self: start;
+    }
+  }
+}

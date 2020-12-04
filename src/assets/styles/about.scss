@@ -1,0 +1,103 @@
+@import "variables";
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import "layouts/home";
+@import "layouts/navbar";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+main {
+  margin-top: 5%;
+  padding: 0 5%;
+}
+
+p {
+  font-size: 1.35em;
+  margin: 5% 0;
+}
+
+.jumbotron {
+  background-color: black;
+  background-image: url("/assets/images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+}
+
+.img-fluid {
+  max-height: 600px;
+  margin: 0 auto;
+}
+
+main li {
+  list-style: decimal !important;
+}
+
+ol {
+  width: 70%;
+  justify-self: center;
+  display: block;
+  
+  & li {
+    margin: 5%;
+  }
+}
+
+h4 {
+  font-weight: 900;
+}
+
+.list {
+  padding: 2%;
+  border-top: 5px solid $red;
+  border-bottom: 5px solid $red;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.list div {
+  text-align: left;
+}
+
+li::marker {
+  font-size: 2rem;
+  color: $red;
+  font-weight: 900;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+
+  & > * {
+    padding: 2.5% 5%;
+  }
+
+  & p {
+    flex: 2;
+  }
+
+  & blockquote {
+    flex: 1;
+    border-left: 5px solid $red;
+  }
+}
+
+@media (max-width: 650px) {
+  .flex {
+    flex-direction: column;
+
+    & > * {
+      padding-top: 10%;
+    }
+  }
+
+  ol {
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 0;
+  }
+}

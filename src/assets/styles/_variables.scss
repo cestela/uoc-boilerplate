@@ -7,3 +7,13 @@ $headers: "Rubik", "Helvetica", serif;
 $regular: "Karla", "Helvetica", serif;
 
 $red: #ff1716;
+
+$theme-colors: (
+    "primary": $red
+);
+
+$link-color: white;
+$link-hover-color: white;
+$font-family-base: $regular;
+$navbar-light-color: white;
+$navbar-light-hover-color:  white;

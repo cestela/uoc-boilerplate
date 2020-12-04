@@ -66,8 +66,8 @@ a {
   color: inherit;
 }
 
-a:hover {
-  text-decoration: underline $red 4px;
+nav li a:hover {
+  border-bottom: 2px solid $red;
 }
 
 header h3 span {
