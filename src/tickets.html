@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/tickets.scss"
+        /> 
+     <!-- do not remove this line! -->
+        <title>Music Lab Fest</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" width="100" height="100" alt="" loading="lazy">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="artists.html">Artistas invitados</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tickets.html">Consigue tus entradas</a>
+                </li>
+              </ul>
+          </nav>
+
+        <main class="container">
+            <header>
+                <h1>Consigue tus entradas</h1>
+            </header>
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="font-weight-bold">Básico</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">10 €</h1>
+                        <ul class="list-unstyled">
+                            <li>Acceso al festival duranto todo el día</li>
+                            <li>Acceso a los food trucks y descuento de 5%</li>
+                            <li>Reembolso de un 50% en cancelaciones</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-primary"><i class="fas fa-plus-circle"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="font-weight-bold">Pro</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">15 €</h1>
+                        <ul class="list-unstyled">
+                            <li>Acceso al festival duranto todo el día y fiesta nocturna</li>
+                            <li>Acceso a los food trucks y descuento de 15%</li>
+                            <li>Reembolso de un 100% en cancelaciones</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-primary"><i class="fas fa-plus-circle"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="font-weight-bold">LUXE</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">30 €</h1>
+                        <ul class="list-unstyled">
+                            <li>Todas las ventajas del ticket PRO</li>
+                            <li>Regalo de merchandising de MUSCI LAB FEST</li>
+                            <li>Acceso a backstage con los artistas</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-primary"><i class="fas fa-plus-circle"></i></button>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-8 order-md-1">
+                    <h4 class="mb-3">Dirección de facturación</h4>
+                    <form class="needs-validation" validate>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="firstName">Nombre</label>
+                          <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="lastName">Apellidos</label>
+                          <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                      </div>
+              
+                      <div class="mb-3">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+              
+                      <div class="mb-3">
+                        <label for="address">Dirección</label>
+                        <input type="text" class="form-control" id="address" required>
+                      </div>
+              
+                      <div class="row">
+                        <div class="col-md-3 mb-3">
+                          <label for="zip">Código postal</label>
+                          <input type="text" class="form-control" id="zip"required>
+                        </div>
+                      </div>
+              
+                      <h4 class="mb-3">Pago</h4>
+              
+                      <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                          <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                          <label class="custom-control-label" for="credit">Tarjeta de crédito</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                          <label class="custom-control-label" for="debit">Tarjeta de débito</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                          <label class="custom-control-label" for="paypal">PayPal</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="cc-name">Nombre en la tarjeta</label>
+                          <input type="text" class="form-control" id="cc-name" required>
+                          <small class="text-muted">Nombre entero que se muestra en la tarjeta</small>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="cc-number">Número de tarjeta</label>
+                          <input type="text" class="form-control" id="cc-number" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3 mb-3">
+                          <label for="cc-expiration">Fechad e expiración</label>
+                          <input type="text" class="form-control" id="cc-expiration" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <label for="cc-cvv">CVV</label>
+                          <input type="text" class="form-control" id="cc-cvv" required>
+                        </div>
+                      </div>
+                      <hr class="mb-4">
+                      <button class="btn btn-primary btn-lg btn-block" type="submit">Continuar con la compra</button>
+                    </form>
+                  </div>
+        </main>
+        <footer>
+            <img
+            src="assets/images/logo.png"
+            alt="Music Lab Fest"
+            class="logo"
+        />
+        <div class="social">
+            <i class="fab fa-instagram fa-2x"></i>
+            <i class="fab fa-facebook-f fa-2x"></i>
+            <i class="fab fa-twitter fa-2x"></i>
+        </div>
+        </footer>
+        <script src="./assets/scripts/main.js"></script>
+        <!-- do not remove this line! -->
+    </body>
+</html>

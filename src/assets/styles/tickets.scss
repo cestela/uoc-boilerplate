@@ -1,0 +1,58 @@
+@import "variables";
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import "layouts/home";
+@import "layouts/navbar";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+ul li {
+  list-style-type: none !important;
+}
+
+body {
+  color: white;
+  background-image: url("/assets/images/tickets.jpg") !important;
+  background-color: black;
+}
+
+h1 {
+  font-weight: 900 !important;
+  font-size: 4em;
+}
+
+.card-deck {
+  margin: 5% 0;
+}
+
+.text-muted {
+  color: gainsboro !important;
+}
+
+.card {
+  background-color: white;
+  color: $red !important;
+    
+  &:hover {
+    border: 1px $red solid;
+    box-shadow: 0 0 25px 0 $red;
+  }
+
+  &-body {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & button {
+      justify-self: flex-end !important;
+    }
+
+    & h1 {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  h1 {
+    font-size: 3em;
+  }
+}
