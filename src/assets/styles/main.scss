@@ -4,6 +4,9 @@
 
 @import "variables";
 
+@tailwind base;
+@tailwind components;
+
 /**
  * Import npm dependencies
  * see: https://en.parceljs.org/module_resolution.html
@@ -19,7 +22,7 @@
  * It's a best practice to use a partial for each page
  */
 
-@import "layouts/home";
+@tailwind utilities;
 
 /**
  * Do NOT include anything else in this file!

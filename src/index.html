@@ -10,23 +10,31 @@
             href="./assets/styles/main.scss"
         />
         <!-- do not remove this line! -->
-        <title>UOC Boilerplate</title>
+        <title>Music Lab Fest</title>
     </head>
-    <body>
-        <img
-            src="assets/images/logo.png"
-            alt="Universitat Oberta de Catalunya"
-            class="uoc-logo"
-        />
-        <h1 class="uoc-title"><i class="fas fa-university"></i> Hello, UOC!</h1>
-        <p>
-            This is a starter template for the Advanced HTML and CSS Tools
-            courses from the Master's Program in Multimedia Applications and the
-            Master's Program in Web App and Website Development at the
-            Universitat Oberta de Catalunya.
-        </p>
-
-        <script src="./assets/scripts/main.js"></script>
-        <!-- do not remove this line! -->
+    <body class="bg-black text-white p-4 flex flex-col">
+        <nav class="flex flex-col p-4">
+            <a href="index.html">
+                <img src="assets/images/logo.png" class="w-28 h-28">
+            </a>
+            <ul class=" uppercase font-black flex flex-col items-start">
+                <li class="">
+                    <a href="#">Artistas invitados</a>
+                </li>
+                <li class="">
+                    <a href="#">Sobre nosotros</a>
+                </li>
+                <li calss="">
+                    <a href="#">Consigue tus entradas</a>
+                </li>
+              </ul>
+        </nav>
+        <main class="flex flex-col p-4">
+            <h1 class="text-5xl">Sobre nosotros</h1>
+            <div class="bg-concert h-5 w-auto">
+                <p>hola</p>
+            </div>
+            
+        </main>
     </body>
 </html>
